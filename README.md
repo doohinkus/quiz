@@ -12,7 +12,7 @@ _A fun quiz that tells Epicodus students which programming track to pursue._
 
 * _Clone repository._
 * _Double click "index.html"_
-* _Or view the [Quiz](http://allrecipes.com/) now._
+* _Or view the [Quiz](https://doohinkus.github.io/quiz/) now._
 
 
 _If "index.html" fails to open when double clicked, then drag the file into your favorite browser._

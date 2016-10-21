@@ -8,8 +8,46 @@ var switchPanel = function (currentPanel, nextPanel){
 }
 
 var evaluateResults = function () {
+//Get data from form
+  var visitor = $("#visitor").val();
   var q1Response = $("#question1").val();
-  console.log(q1Response);
+  var q2Response = $("#question2").val();
+  var q3Response = $("#question3").val();
+
+  var rails = 0;
+  var cSharp = 0;
+  var css = 0;
+//Make sure first input only contains letters.
+//If it doesn't, call visitor silly Goose
+  if(!visitor.match(/^[A-Za-z]+$/)){
+     visitor = "Silly Goose";
+  }
+
+  if (q1Response === "rails"){
+     rails++;
+  }else if (q1Response === "c#"){
+    cSharp++;
+  }else{
+    css++;
+  }
+
+  if (q2Response === "rails"){
+     rails++;
+  }else if (q2Response === "c#"){
+    cSharp++;
+  }else{
+    css++;
+  }
+
+  if (q3Response === "rails"){
+     rails++;
+  }else if (q3Response === "c#"){
+    cSharp++;
+  }else{
+    css++;
+  }
+
+  console.log(visitor, " ", rails, " ", cSharp, " ", css);
 
 
 }

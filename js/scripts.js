@@ -13,6 +13,7 @@ var visitorInput = function (){
     if(!visitor.match(/^[A-Za-z]+$/)){
       return visitor = "Silly Goose";
     }
+    return visitor;
 }
 var evaluateResults = function () {
 //Get data from form
@@ -73,9 +74,12 @@ $(document).ready(function(){
   //Evaluate and display quiz results
    $("form#epicodusQuiz").submit(function (event){
   //move panel back to startQuiz
+  console.log(visitorInput());
     switchPanel("#panel4", "#panel1");
   //Add results to modal, then trigger modal
+
     $(".name").text(visitorInput());
+    console.log(visitorInput());
     $(".quizResults").text(evaluateResults());
     $("#myModal").modal('show');
      event.preventDefault();

@@ -120,11 +120,11 @@ $(document).ready(function(){
 
   //Evaluate and display quiz results
    $("form#epicodusQuiz").submit(function (event){
-  //move panel back to startQuiz
-  console.log(visitorInput());
-    switchPanel("#panel4", "#panel1");
-  //Add results to modal, then trigger modal
+  //move panel back to start of quiz
 
+    switchPanel("#panel4", "#panel1");
+
+  //Add results to modal, then trigger modal
     $(".name").text(visitorInput());
     $(".quizResults").text(evaluateResults());
     $("#myModal").modal('show');
@@ -132,9 +132,17 @@ $(document).ready(function(){
    });
 
    //Quiz Button Takes User to Quiz Section
-    $("#takeQuiz").click(function (){
-     //Take user to quiz section
-      window.location.href = "#footer";
+    // $("#takeQuiz").click(function (){
+    //  //Take user to quiz section
+    //   window.location.href = "#footer";
+    //
+    // });
+    //scroll down to quiz
+    $("#takeQuiz").click(function(event){
+      event.preventDefault();
+      $('html, body').animate({
+          scrollTop: $("#footer").offset().top
+      }, 1000);
     });
 
   //Start Quiz!!!!

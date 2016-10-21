@@ -6,15 +6,14 @@ watermelon: #ffb85
 nuetral: #efefef
 */
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous|Roboto+Slab');
-html{
+/*html{
   width:100%;
   height:100%;
-}
+}*/
 body{
   text-align: center;
   background: #efefef;
   font-family: 'Roboto Slab', serif;
-  /*color: #FFCE00;*/
   color: #fC4a1a;
 }
 h1{
@@ -24,6 +23,7 @@ h1{
 }
 .modal-content h1{
   color: #4abdac !important;
+
 }
 .jumbotron{
   background-image: url(../img/brightBackground.jpg);
@@ -49,14 +49,21 @@ p{
   font-size: 14pt;
 
 }
+.modal-content p{
+  padding: 3em;
+  text-align: justify;
+}
 #quizImage{
   width: 200px;
   height: 200px;
+
 }
 #preHeader{
   background-color: #333;
   padding: 1em;
   color: #fff;
+
+
 }
 #takeQuiz, #submit{
   width: 200px;
@@ -72,20 +79,21 @@ p{
 }
 #mainContent{
   margin-top: 3em;
+  height: 500px;
 }
 #epicodusQuiz{
 
 }
 #quizContent{
-  margin-bottom: 20%;
-
+  /*margin-bottom: 20%;*/
+  height: 400px;
 }
 #visitor{
 
 }
 #panel1, #panel2, #panel3, #panel4{
   display: none;
-  height: 400px;
+  height: 100px;
 
 }
 #panel1{
@@ -94,12 +102,12 @@ p{
 .modal-footer{
   text-align: center;
 }
-footer{
+#footer{
   background-color: #222222;
-  display: block;
-  height:100px;
+  height: 200px;
+  width: 100%;
   color: #fff;
   font-size: 12pt;
-  padding-top: 1em;
-
+  position: absolute;
+  padding-top: 2em;
 }

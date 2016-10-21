@@ -1,15 +1,5 @@
-/*
---colors:
-sky : #caebf2
-carbon: #a9a9a9
-watermelon: #ffb85
-nuetral: #efefef
-*/
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous|Roboto+Slab');
-/*html{
-  width:100%;
-  height:100%;
-}*/
+
 body{
   text-align: center;
   background: #efefef;
@@ -35,7 +25,6 @@ h1{
 
 }
 .quizResults{
-  /*color: #f7b733;*/
 
 
 }
@@ -71,10 +60,11 @@ p{
   font-size: 18pt;
   margin-top: 2em;
 }
-#startQuiz, #p2prev, #p2next, #p3prev, #p3next, #submit{
+
+.next, .previous, #submit{
   margin-top: 2em;
 }
-#p2prev, #p3prev{
+#p2prev, #p3prev, #p4prev{
   margin-right: 4em;
 }
 #mainContent{
@@ -85,13 +75,12 @@ p{
 
 }
 #quizContent{
-  /*margin-bottom: 20%;*/
   height: 400px;
 }
 #visitor{
 
 }
-#panel1, #panel2, #panel3, #panel4{
+#panel1, #panel2, #panel3, #panel4, #panel5{
   display: none;
   height: 100px;
 

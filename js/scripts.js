@@ -22,7 +22,7 @@ var evaluateResults = function () {
   if(!visitor.match(/^[A-Za-z]+$/)){
      visitor = "Silly Goose";
   }
-
+//Weight responses
   if (q1Response === "rails"){
      rails++;
   }else if (q1Response === "c#"){
@@ -46,8 +46,22 @@ var evaluateResults = function () {
   }else{
     css++;
   }
+//Use values to determine which track to suggest
+  //Is it rails?
+  if (rails > cSharp && rails > css){
+    return "Ruby on Rails Path";
+  //Is it c#?
+  } else if(cSharp > css){
+    return "C# .Net Path";
+  //Is it css?
+  } else if(css > cSharp){
+    return "CSS Design Path";
+   //You're fullstack, but was rails higher or cSharp
+  } else{
+    return "Just Choose One";
+  }
 
-  console.log(visitor, " ", rails, " ", cSharp, " ", css);
+  // console.log(visitor, " ", rails, " ", cSharp, " ", css);
 
 
 }
@@ -59,7 +73,7 @@ $(document).ready(function(){
 
   //Evaluate and display quiz results
    $("form#epicodusQuiz").submit(function (event){
-     evaluateResults();
+     console.log(evaluateResults());
      event.preventDefault();
    });
 

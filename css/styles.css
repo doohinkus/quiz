@@ -39,10 +39,10 @@ body{
   font-size: 18pt;
   margin-top: 2em;
 }
-#startQuiz, #p2prev, #p2next, #p3prev, #p3next{
+#startQuiz, #p2prev, #p2next, #p3prev, #p3next, #submit{
   margin-top: 2em;
 }
-#p2prev{
+#p2prev, #p3prev{
   margin-right: 4em;
 }
 #mainContent{

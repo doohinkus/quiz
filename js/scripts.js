@@ -15,7 +15,7 @@ $(document).ready(function(){
   //Take Quiz Button Takes User to Quiz
    $("#takeQuiz").click(function (){
      //Take user to main content area
-     window.location.href = "#mainContent";
+     window.location.href = "#footer";
 
    });
    //Evaluate and display quiz results

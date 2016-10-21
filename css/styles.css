@@ -1,8 +1,24 @@
+/*
+--colors:
+sky : #caebf2
+carbon: #a9a9a9
+watermelon: #ffb85
+nuetral: #efefef
+*/
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Righteous|Roboto+Slab');
+html{
+  width:100%;
+  height:100%;
+}
 body{
   text-align: center;
+  background: #efefef;
+  font-family: 'Roboto Slab', serif;
 }
 .jumbotron{
-
+  background-image: url(../img/brightBackground.jpg);
+  background-position: center;
+  height: 400px;
 
 }
 .name{
@@ -15,29 +31,45 @@ body{
 
 }
 .previous{
-  
-}
-#takeQuiz{
 
 }
-#startQuiz{
+#takeQuiz{
+  width: 200px;
+  height: 60px;
+  font-size: 18pt;
   margin-top: 2em;
 }
+#startQuiz, #p2prev, #p2next, #p3prev, #p3next{
+  margin-top: 2em;
+}
+#p2prev{
+  margin-right: 4em;
+}
 #mainContent{
-  margin-top:200px;
+  margin-top: 3em;
 }
 #epicodusQuiz{
 
 }
 #quizContent{
+  margin-bottom: 20%;
 
 }
 #visitor{
 
 }
-#panle1, #panel2, #panel3{
+#panel1, #panel2, #panel3{
   display: none;
+  height: 400px;
+
 }
+#panel1{
+  display: block;
+}
+
 footer{
+  background-color: #222222;
+  display: block;
+  height:100px;
 
 }

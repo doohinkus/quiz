@@ -49,6 +49,10 @@ p{
   font-size: 14pt;
 
 }
+#quizImage{
+  width: 200px;
+  height: 200px;
+}
 #preHeader{
   background-color: #333;
   padding: 1em;

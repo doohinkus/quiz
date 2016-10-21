@@ -53,6 +53,7 @@ var visitorInput = function (){
     return visitor;
 }
 
+
 var evaluateResults = function () {
 //Get data from form
   var q1Response = $("#question1").val();
@@ -94,15 +95,19 @@ var evaluateResults = function () {
 //Use values to determine which track to suggest
   //Is it rails?
   if (rails > cSharp && rails > css){
+    $("#quizImage").attr('src','img/rubyRails.jpg');
     return "Ruby on Rails Path. " + rubyMessage;
   //Is it c#?
   } else if(cSharp > css){
+    $("#quizImage").attr('src','img/cSharp.png');
     return "C# .Net Path. " + cSharpMessage;
   //Is it css?
   } else if(css > cSharp){
+    $("#quizImage").attr('src','img/css.png');
     return "CSS Design Path. " + cssMessage;
    //You're all over the place. Flip a coin.
   } else{
+    $("#quizImage").attr('src','img/undecided.jpg');
     return "Flip-A-Coin Path because you didn't show a preference for any one path.";
   }
 

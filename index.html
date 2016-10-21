@@ -5,8 +5,9 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Epicodus Quiz</title>
   </head>
   <body>
     <!--HEADER-->
@@ -24,9 +25,48 @@
         </div><!--end of col-md-3-->
 
         <div class="col-md-6">
-          <div id="quizContent">
-            Quiz content goes here
-          </div>
+          <form id="epicodusQuiz">
+            <div id="quizContent">
+              <div id="panel1">
+                <div class="form-group">
+                  <label for="visitor">Please enter your name:</label>
+                  <input id="visitor" class="form-control" type="text">
+                  <button id="startQuiz" class="btn btn-primary">Next</button>
+                </div><!--end form-group-->
+              </div><!--end panel1-->
+
+              <div id="panel2">
+                <h2>First Question</h2>
+                <div class="form-group">
+
+                  <select class="form-control" id="question1">
+                    <option value="rails">Coffee</option>
+                    <option value="c#">Tea</option>
+                    <option value="css">Kombucha</option>
+                  </select>
+                  <button id="p2prev" class="btn btn-primary next">Previous</button>
+                  <button id="p2next" class="btn btn-primary previous">Next</button>
+
+                </div><!--end form-group-->
+              </div><!--end panel2-->
+
+              <div id="panel3">
+                <h2>First Question</h2>
+                <div class="form-group">
+
+                  <select class="form-control" id="question2">
+                    <option value="rails">Coffee</option>
+                    <option value="c#">Tea</option>
+                    <option value="css">Kombucha</option>
+                  </select>
+                  <button id="p3prev" class="btn btn-primary next">Previous</button>
+                  <!-- <button id="p3next" class="btn btn-primary previous">Next</button> -->
+                </div><!--end form-group-->
+              </div><!--end panel3-->
+
+
+            </div><!--end quizContent-->
+        </form><!--end form-->
         </div><!--end of col-md-6-->
 
         <div class="col-md-3">
@@ -34,6 +74,21 @@
         </div><!--end of col-md-3-->
       </div><!--end of row-->
     </div><!--end of container-->
+    <!--MODAL-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="myModal">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+              <h1>Quiz Results</h1>
+              Dear <span class="name"></span>,
+              <p class="quizResults">
+
+              </p>
+
+            </div><!--end model-content-->
+          </div><!--end modal-dialog-->
+      </div><!--end modal-->
+
     <!--FOOTER-->
     <footer>
       Footer Goes Here

@@ -5,14 +5,38 @@ body{
 
 
 }
+.name{
+
+}
+.quizResults{
+
+}
+.next{
+
+}
+.previous{
+  
+}
 #takeQuiz{
 
 }
+#startQuiz{
+  margin-top: 2em;
+}
 #mainContent{
+  margin-top:200px;
+}
+#epicodusQuiz{
 
 }
 #quizContent{
 
+}
+#visitor{
+
+}
+#panle1, #panel2, #panel3{
+  display: none;
 }
 footer{
 

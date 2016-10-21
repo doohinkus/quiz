@@ -20,10 +20,14 @@ var evaluateResults = function () {
   var q1Response = $("#question1").val();
   var q2Response = $("#question2").val();
   var q3Response = $("#question3").val();
-
+//Set values to 0
   var rails = 0;
   var cSharp = 0;
   var css = 0;
+//Set messages for each Path
+  var rubyMessage = "Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.";
+  var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
+  var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems."
 
 //Weight responses
   if (q1Response === "rails"){
@@ -52,16 +56,16 @@ var evaluateResults = function () {
 //Use values to determine which track to suggest
   //Is it rails?
   if (rails > cSharp && rails > css){
-    return "Ruby on Rails Path";
+    return "Ruby on Rails Path. " + rubyMessage;
   //Is it c#?
   } else if(cSharp > css){
-    return "C# .Net Path";
+    return "C# .Net Path. " + cSharpMessage;
   //Is it css?
   } else if(css > cSharp){
-    return "CSS Design Path";
+    return "CSS Design Path. " + cssMessage;
    //You're fullstack, but was rails higher or cSharp
   } else{
-    return "Flip-A-Coin Path because you didn't show a preference for any one path";
+    return "Flip-A-Coin Path because you didn't show a preference for any one path.";
   }
 
 }
@@ -116,14 +120,3 @@ $(document).ready(function(){
 
 
 });
-/*
-bits about ruby
-Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.
-
-bits about c#
- C# developers are capable of handling many aspects of developing an application, including but not limited to performance, scalability, security, testing, and more. C# developers can develop modern applications that run on desktop computers, or even sophisticated back-end processes powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.
-
- bits about css
- Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems. 
-
-*/

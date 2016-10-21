@@ -10,10 +10,14 @@
     <title>Epicodus Quiz</title>
   </head>
   <body>
+    <!--PREHEADER-->
+    <div id="preHeader">
+      Epicodus Quiz Project
+    </div>
     <!--HEADER-->
     <header class="jumbotron">
       <h1>Which type of coder are you?</h1>
-      <button id="takeQuiz" class="btn btn-primary bt-lg">Take Quiz!</button>
+      <button id="takeQuiz" class="btn btn-success bt-lg">Take Quiz!</button>
     </header><!--end header-->
 
     <!--MIDDLE CONTENT-->
@@ -29,9 +33,10 @@
             <div id="quizContent">
               <div id="panel1">
                 <div class="form-group">
+                  <h2>Let's Begin!</h2>
                   <h2>Please enter your name:</h2>
                   <input id="visitor" class="form-control" type="text">
-                  <a id="startQuiz" class="btn btn-primary">Next</a>
+                  <a id="startQuiz" class="btn btn-warning">Next</a>
                 </div><!--end form-group-->
               </div><!--end panel1-->
 
@@ -44,8 +49,8 @@
                     <option value="c#">MicroSoft Paint</option>
                     <option value="css">PhotoShop</option>
                   </select>
-                  <a id="p2prev" class="btn btn-primary next">Previous</a>
-                  <a id="p2next" class="btn btn-primary previous">Next</a>
+                  <a id="p2prev" class="btn btn-warning next">Previous</a>
+                  <a id="p2next" class="btn btn-warning previous">Next</a>
 
                 </div><!--end form-group-->
               </div><!--end panel2-->
@@ -59,8 +64,8 @@
                     <option value="c#">Fire up Microsoft Access or Excel</option>
                     <option value="css">Draw Dilbert because you hate working with complicated information.</option>
                   </select>
-                  <a id="p3prev" class="btn btn-primary next">Previous</a>
-                  <a id="p3next" class="btn btn-primary previous">Next</a>
+                  <a id="p3prev" class="btn btn-warning next">Previous</a>
+                  <a id="p3next" class="btn btn-warning previous">Next</a>
 
                 </div><!--end form-group-->
               </div><!--end panel3-->
@@ -68,7 +73,7 @@
               <div id="panel4">
                 <h2>Find out which type of coder you are!!!</h2>
                 <div class="form-group">
-                  <button id="submit" type="submit" class="btn btn-primary next">Submit</button>
+                  <button id="submit" type="submit" class="btn btn-success next">Submit</button>
 
                 </div><!--end form-group-->
               </div><!--end panel3-->
@@ -89,12 +94,15 @@
             <div class="modal-content">
 
               <h1>Quiz Results</h1>
-              Dear <span class="name"></span>,
+              <h3>Dear <span class="name"></span>,</h3>
               <p>
-                You are happy to know that you should take the <span class="quizResults"></span>
+                Based on our findings from this quiz, I am happy to announce that you should follow the  <span class="quizResults"></span>!
               </p>
-
+              <div class="modal-footer">
+               <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+             </div><!--end modal-footer-->
             </div><!--end model-content-->
+
           </div><!--end modal-dialog-->
       </div><!--end modal-->
 

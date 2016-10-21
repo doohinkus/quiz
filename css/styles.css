@@ -14,6 +14,16 @@ body{
   text-align: center;
   background: #efefef;
   font-family: 'Roboto Slab', serif;
+  /*color: #FFCE00;*/
+  color: #fC4a1a;
+}
+h1{
+  color: #444 !important;
+  text-shadow: 1px 1px 0px rgba(255, 245, 229, .5);
+
+}
+.modal-content h1{
+  color: #4abdac !important;
 }
 .jumbotron{
   background-image: url(../img/brightBackground.jpg);
@@ -25,6 +35,8 @@ body{
 
 }
 .quizResults{
+  color: #f7b733;
+
 
 }
 .next{
@@ -33,7 +45,16 @@ body{
 .previous{
 
 }
-#takeQuiz{
+p{
+  font-size: 14pt;
+
+}
+#preHeader{
+  background-color: #333;
+  padding: 1em;
+  color: #fff;
+}
+#takeQuiz, #submit{
   width: 200px;
   height: 60px;
   font-size: 18pt;
@@ -66,7 +87,9 @@ body{
 #panel1{
   display: block;
 }
-
+.modal-footer{
+  text-align: center;
+}
 footer{
   background-color: #222222;
   display: block;

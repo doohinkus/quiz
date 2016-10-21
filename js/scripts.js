@@ -114,7 +114,16 @@ $(document).ready(function(){
    });
 
 
-    // $("#myModal").modal('show');
-    //.modal content
 
 });
+/*
+bits about ruby
+Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.
+
+bits about c#
+ C# developers are capable of handling many aspects of developing an application, including but not limited to performance, scalability, security, testing, and more. C# developers can develop modern applications that run on desktop computers, or even sophisticated back-end processes powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.
+
+ bits about css
+ Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems. 
+
+*/

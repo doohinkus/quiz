@@ -72,14 +72,12 @@ $(document).ready(function(){
 
   //Evaluate and display quiz results
    $("form#epicodusQuiz").submit(function (event){
-      // console.log(evaluateResults(), " ", visitorInput());
+  //move panel back to startQuiz
+    switchPanel("#panel4", "#panel1");
   //Add results to modal, then trigger modal
     $(".name").text(visitorInput());
     $(".quizResults").text(evaluateResults());
     $("#myModal").modal('show');
-    // $("#myModal").modal('show');
-    //.modal content
-
      event.preventDefault();
    });
 
@@ -92,7 +90,6 @@ $(document).ready(function(){
   //Start Quiz!!!!
    $("#startQuiz").click(function (){
      switchPanel("#panel1", "#panel2");
-
    });
 
   //There's gotta be a better way!!!!

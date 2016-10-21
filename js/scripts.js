@@ -6,10 +6,16 @@ var switchPanel = function (currentPanel, nextPanel){
   //move to next one
   $(nextPanel).slideDown();
 }
-
+var visitorInput = function (){
+  //Make sure first input only contains letters.
+  //If it doesn't, call visitor silly Goose
+    var visitor = $("#visitor").val();
+    if(!visitor.match(/^[A-Za-z]+$/)){
+      return visitor = "Silly Goose";
+    }
+}
 var evaluateResults = function () {
 //Get data from form
-  var visitor = $("#visitor").val();
   var q1Response = $("#question1").val();
   var q2Response = $("#question2").val();
   var q3Response = $("#question3").val();
@@ -17,11 +23,7 @@ var evaluateResults = function () {
   var rails = 0;
   var cSharp = 0;
   var css = 0;
-//Make sure first input only contains letters.
-//If it doesn't, call visitor silly Goose
-  if(!visitor.match(/^[A-Za-z]+$/)){
-     visitor = "Silly Goose";
-  }
+
 //Weight responses
   if (q1Response === "rails"){
      rails++;
@@ -58,11 +60,8 @@ var evaluateResults = function () {
     return "CSS Design Path";
    //You're fullstack, but was rails higher or cSharp
   } else{
-    return "Just Choose One";
+    return "Flip-A-Coin Path because you didn't show a preference for any one path";
   }
-
-  // console.log(visitor, " ", rails, " ", cSharp, " ", css);
-
 
 }
 
@@ -73,7 +72,14 @@ $(document).ready(function(){
 
   //Evaluate and display quiz results
    $("form#epicodusQuiz").submit(function (event){
-     console.log(evaluateResults());
+      // console.log(evaluateResults(), " ", visitorInput());
+  //Add results to modal, then trigger modal
+    $(".name").text(visitorInput());
+    $(".quizResults").text(evaluateResults());
+    $("#myModal").modal('show');
+    // $("#myModal").modal('show');
+    //.modal content
+
      event.preventDefault();
    });
 

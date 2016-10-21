@@ -6,6 +6,43 @@ var switchPanel = function (currentPanel, nextPanel){
   //move to next one
   $(nextPanel).slideDown();
 }
+
+// Next panel
+var nextPanel = function (thisButton) {
+  var lastPanel = 4;
+  var thisPanelID = $(thisButton).parent().parent().attr("id");
+  //grab panel id and turn to number
+  thisPanelID = parseInt(thisPanelID.charAt(thisPanelID.length-1));
+  //add 1 to find next panel
+  var nextPanelID = "#panel" + (thisPanelID + 1);
+  //if panel doesn't equal last panel, then slide this panel up and next one down
+  if (thisPanelID < lastPanel){
+    //slide up this panel
+    $($(thisButton).parent().parent()).slideUp();
+    //move to next one
+    $(nextPanelID).slideDown();
+  }
+  // console.log(thisPanelID, " ", nextPanelID);
+}
+
+//prev panel
+var prevPanel = function (thisButton) {
+  var thisPanelID = $(thisButton).parent().parent().attr("id");
+  //grab panel id and turn to number
+  thisPanelID = parseInt(thisPanelID.charAt(thisPanelID.length-1));
+  //add 1 to find next panel
+  var nextPanelID = "#panel" + (thisPanelID - 1);
+  //if panel doesn't equal last panel, then slide this panel up and next one down
+  if (thisPanelID > 1){
+    //slide up this panel
+    $($(thisButton).parent().parent()).slideUp();
+    //move to next one
+    console.log(thisPanelID)
+    $(nextPanelID).slideDown();
+  }
+  // console.log(thisPanelID, " ", nextPanelID);
+}
+
 var visitorInput = function (){
   //Make sure first input only contains letters.
   //If it doesn't, call visitor silly Goose
@@ -15,6 +52,7 @@ var visitorInput = function (){
     }
     return visitor;
 }
+
 var evaluateResults = function () {
 //Get data from form
   var q1Response = $("#question1").val();
@@ -63,7 +101,7 @@ var evaluateResults = function () {
   //Is it css?
   } else if(css > cSharp){
     return "CSS Design Path. " + cssMessage;
-   //You're fullstack, but was rails higher or cSharp
+   //You're all over the place. Flip a coin.
   } else{
     return "Flip-A-Coin Path because you didn't show a preference for any one path.";
   }
@@ -83,7 +121,6 @@ $(document).ready(function(){
   //Add results to modal, then trigger modal
 
     $(".name").text(visitorInput());
-    console.log(visitorInput());
     $(".quizResults").text(evaluateResults());
     $("#myModal").modal('show');
      event.preventDefault();
@@ -96,25 +133,13 @@ $(document).ready(function(){
     });
 
   //Start Quiz!!!!
-   $("#startQuiz").click(function (){
-     switchPanel("#panel1", "#panel2");
+  //next panel
+   $(".next").click(function (){
+     nextPanel(this);
    });
-
-  //There's gotta be a better way!!!!
-   $("#p2prev").click(function(){
-    switchPanel($(this).parent().parent(), "#panel1");
-   });
-
-   $("#p2next").click(function(){
-    switchPanel($(this).parent().parent(), "#panel3");
-   });
-
-   $("#p3prev").click(function(){
-    switchPanel($(this).parent().parent(), "#panel2");
-   });
-
-   $("#p3next").click(function(){
-    switchPanel($(this).parent().parent(), "#panel4");
+  //previous panel
+   $(".previous").click(function (){
+     prevPanel(this);
    });
 
 

@@ -1,8 +1,8 @@
 /*----BUSINESS LOGIC----*/
 //move from panel to panel.
 var switchPanel = function (currentPanel, nextPanel){
-  $(currentPanel).slideUp();
-  $(nextPanel).slideDown();
+  $(currentPanel).hide();
+  $(nextPanel).fadeIn();
 }
 
 // Next panel
@@ -15,8 +15,8 @@ var nextPanel = function (thisButton) {
 
 
   if (thisPanelID < lastPanel){
-    $($(thisButton).parent().parent()).slideUp();
-    $(nextPanelID).slideDown();
+    $($(thisButton).parent().parent()).hide();
+    $(nextPanelID).fadeIn();
   }
 }
 
@@ -29,8 +29,8 @@ var prevPanel = function (thisButton) {
 
 
   if (thisPanelID > 1){
-    $($(thisButton).parent().parent()).slideUp();
-    $(nextPanelID).slideDown();
+    $($(thisButton).parent().parent()).hide();
+    $(nextPanelID).fadeIn();
   }
 }
 

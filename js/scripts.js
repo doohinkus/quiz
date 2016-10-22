@@ -118,7 +118,7 @@ $(document).ready(function(){
 
     event.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#footer").offset().top
+        scrollTop: $("#targetScroll").offset().top
     }, 1000);
 
   });

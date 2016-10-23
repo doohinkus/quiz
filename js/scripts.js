@@ -42,6 +42,24 @@ var visitorInput = function (){
     return visitor;
 }
 
+var message = function (answer){
+  var rubyMessage = "Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.";
+  var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
+  var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems.";
+  var coinMessage = "Flip-A-Coin Path because you didn't show a preference for any one path."
+  if (answer === "ruby"){
+    return rubyMessage;
+  }else if (answer === "c#"){
+    return cSharpMessage;
+  } else if (answer === "css"){
+    return cssMessage;
+  }else{
+    return coinMessage;
+  }
+
+
+
+}
 
 var evaluateResults = function () {
 
@@ -51,9 +69,6 @@ var evaluateResults = function () {
   var cSharp = 0;
   var css = 0;
 
-  var rubyMessage = "Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.";
-  var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
-  var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems."
 
 //
   for (var i =1 ; i < numberOfQuestions; i++){
@@ -75,16 +90,16 @@ var evaluateResults = function () {
 //evaluate responses
   if (rails > cSharp && rails > css){
     $("#quizImage").attr('src','img/rubyRails.jpg');
-    return "Ruby on Rails Path. " + rubyMessage;
+    return "ruby";
   } else if(cSharp > css){
     $("#quizImage").attr('src','img/cSharp.png');
-    return "C# .Net Path. " + cSharpMessage;
+    return "c#"
   } else if(css > cSharp){
     $("#quizImage").attr('src','img/css.png');
-    return "CSS Design Path. " + cssMessage;
+    return "css";
   } else{
     $("#quizImage").attr('src','img/undecided.jpg');
-    return "Flip-A-Coin Path because you didn't show a preference for any one path.";
+    return "coin";
   }
 
 }
@@ -97,7 +112,7 @@ $(document).ready(function(){
 
     switchPanel("#panel5", "#panel1");
     $(".name").text(visitorInput());
-    $(".quizResults").text(evaluateResults());
+    $(".quizResults").text(message(evaluateResults()));
     $("#myModal").modal('show');
      event.preventDefault();
 

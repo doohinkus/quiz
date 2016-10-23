@@ -46,7 +46,8 @@ var message = function (answer){
   var rubyMessage = "Great Ruby developers can use Ruby to build anything from the back-end of a web application to command line utilities on your computer. The language is dynamic, reflective, and object oriented.";
   var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
   var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems.";
-  var coinMessage = "Flip-A-Coin Path because you didn't show a preference for any one path."
+  var coinMessage = "Flip-A-Coin Path because you didn't show a preference for any one path.";
+
   if (answer === "ruby"){
     return rubyMessage;
   }else if (answer === "c#"){
@@ -64,17 +65,16 @@ var message = function (answer){
 var evaluateResults = function () {
 
   var numberOfQuestions = 4;
-
   var rails = 0;
   var cSharp = 0;
   var css = 0;
 
 
-//
+//get values from radio buttons
   for (var i =1 ; i < numberOfQuestions; i++){
     var name = "question" + i;
     var response = $("input:radio[name=" + name + "]:checked").val();
-    console.log(name, " ", response);
+
     if (response === "rails"){
        rails++;
     }else if (response === "c#"){
@@ -119,9 +119,8 @@ $(document).ready(function(){
    });
 
 
-  $("#takeQuiz").click(function(event){
+  $("#takeQuiz").click(function(){
 
-    event.preventDefault();
     $('html, body').animate({
         scrollTop: $("#targetScroll").offset().top
     }, 1000);

@@ -45,9 +45,6 @@ var visitorInput = function (){
 
 var evaluateResults = function () {
 
-  // var q1Response = $("#question1").val();
-  // var q2Response = $("#question2").val();
-  // var q3Response = $("#question3").val();
   var numberOfQuestions = 4;
 
   var rails = 0;
@@ -58,8 +55,11 @@ var evaluateResults = function () {
   var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
   var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems."
 
-  for (var i =0 ; i < numberOfQuestions; i++){
-    var response = $("#question" + i ).val();
+//
+  for (var i =1 ; i < numberOfQuestions; i++){
+    var name = "question" + i;
+    var response = $("input:radio[name=" + name + "]:checked").val();
+    console.log(name, " ", response);
     if (response === "rails"){
        rails++;
     }else if (response === "c#"){

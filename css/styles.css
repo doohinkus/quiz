@@ -21,18 +21,8 @@ h1{
   height: 400px;
 
 }
-.name{
-
-}
-.quizResults{
-
-
-}
-.next{
-
-}
-.previous{
-
+.radio{
+  text-align: left;
 }
 p{
   font-size: 14pt;

@@ -45,9 +45,10 @@ var visitorInput = function (){
 
 var evaluateResults = function () {
 
-  var q1Response = $("#question1").val();
-  var q2Response = $("#question2").val();
-  var q3Response = $("#question3").val();
+  // var q1Response = $("#question1").val();
+  // var q2Response = $("#question2").val();
+  // var q3Response = $("#question3").val();
+  var numberOfQuestions = 4;
 
   var rails = 0;
   var cSharp = 0;
@@ -57,32 +58,21 @@ var evaluateResults = function () {
   var cSharpMessage = "C# developers create modern applications that run on desktop computers or sophisticated servers powering modern web applications. The frameworks .Net and Mono combined allow a wide range of platforms to be targeted by applications developed with C#.";
   var cssMessage = "Front End designers are primarily concerned with how the product feels. A given design problem has no single right answer. Front End designers explore many different approaches to solving specific user problems."
 
-
-  if (q1Response === "rails"){
-     rails++;
-  }else if (q1Response === "c#"){
-    cSharp++;
-  }else{
-    css++;
-  }
-
-  if (q2Response === "rails"){
-     rails++;
-  }else if (q2Response === "c#"){
-    cSharp++;
-  }else{
-    css++;
-  }
-
-  if (q3Response === "rails"){
-     rails++;
-  }else if (q3Response === "c#"){
-    cSharp++;
-  }else{
-    css++;
+  for (var i =0 ; i < numberOfQuestions; i++){
+    var response = $("#question" + i ).val();
+    if (response === "rails"){
+       rails++;
+    }else if (response === "c#"){
+      cSharp++;
+    }else{
+      css++;
+    }
   }
 
 
+
+
+//evaluate responses
   if (rails > cSharp && rails > css){
     $("#quizImage").attr('src','img/rubyRails.jpg');
     return "Ruby on Rails Path. " + rubyMessage;

@@ -7,9 +7,37 @@ body{
   color: #fC4a1a;
 }
 h1{
-  color: #444 !important;
-  text-shadow: 1px 1px 0px rgba(255, 245, 229, .5);
+  color: #dff0d8 !important;
+  font-weight: bold;
+  text-shadow: #ccc 0 1px 0, #c9c9c9 0 2px 0, #bbb 0 3px 0, #b9b9b9 0 4px 0, #aaa 0 5px 0,rgba(0,0,0,.1) 0 6px 1px, rgba(0,0,0,.1) 0 0 5px, rgba(0,0,0,.3) 0 1px 3px, rgba(0,0,0,.15) 0 3px 5px, rgba(0,0,0,.2) 0 5px 10px, rgba(0,0,0,.2) 0 10px 10px, rgba(0,0,0,.1) 0 20px 20px;
+  /*text-shadow: 1px 1px 0px rgba(255, 245, 229, .5);*/
+  /*text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);*/
 
+}
+
+.shine
+{
+    background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+    -webkit-background-size: 125px;
+
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shine
+{
+    0%
+    {
+        background-position: top left;
+    }
+    100%
+    {
+        background-position: top right;
+    }
 }
 .modal-content h1{
   color: #4abdac !important;
